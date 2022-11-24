@@ -25,3 +25,15 @@ class PessoaDAO:
       return pessoas
     except Exception as e:
       return e
+
+      #Função/método para inserir no banco.
+      def save(self, pessoa):
+        sql = "INSERT INTO pessoa (nome) VALUES (%s)"
+
+        try:
+          self.cursor.execute(sql, pessoa.nome)
+        except Exception as e:
+          return e
+
+        pessoa.id = self.cursor.lastrowid 
+        return pessoa
