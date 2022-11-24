@@ -7,3 +7,9 @@ print(poyatos)
 
 #Quero mostrar só o nome
 print(poyatos.nome)`
+
+class Pessoa:
+  #Atributos
+  id = None
+  nome = None
+
